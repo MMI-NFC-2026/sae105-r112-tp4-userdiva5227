@@ -1,3 +1,36 @@
 /**
 * Accordeon
 */
+.accordeon {
+display: flex;
+align-items: flex-start;
+gap: 2rem;
+interpolate-size: allow-keywords;
+}
+
+details {
+display: flex;
+align-items: flex-start;
+gap: 2rem;
+width: 120px;
+flex: 0 0 auto;
+overflow: hidden;
+transition: width 2s ease-in-out;
+}
+
+summary {
+flex: 0 0 120px;
+list-style: none;
+cursor: pointer;
+}
+summary::-webkit-details-marker {
+display: none;
+}
+
+details[open] {
+width: auto;
+}
+
+details::details-content {
+transition: content-visibility 2s ease-in-out allow-discrete;
+}
