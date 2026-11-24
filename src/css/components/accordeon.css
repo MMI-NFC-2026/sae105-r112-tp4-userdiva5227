@@ -27,6 +27,9 @@ summary::-webkit-details-marker {
 display: none;
 }
 
+summary::marker {
+display: none;
+}   
 details[open] {
 width: auto;
 }
