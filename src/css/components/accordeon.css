@@ -46,6 +46,13 @@ summary::marker {
 display: none;
 }
 
+summary img {
+display: block;
+width: 84px;
+height: 68px;
+object-fit: cover;
+}
+
 details[open] summary::after {
     transform: rotate(0);
     background: #f5a0aa;
