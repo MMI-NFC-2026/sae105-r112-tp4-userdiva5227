@@ -75,7 +75,8 @@ details p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    details::details-content,
     summary::after {
-        transition: none;
+        transition-duration: 0.01ms;
     }
 }
