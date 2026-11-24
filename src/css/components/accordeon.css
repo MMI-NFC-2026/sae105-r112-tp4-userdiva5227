@@ -57,4 +57,25 @@ details[open] summary::after {
     transform: rotate(0);
     background: #f5a0aa;
 }
+details[open]::details-content {
+    height: auto;
+}
 
+details > div{
+    padding: 0 7px 8px;
+}
+
+details h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+}
+
+details p {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    summary::after {
+        transition: none;
+    }
+}
