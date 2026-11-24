@@ -25,15 +25,19 @@ cursor: pointer;
 }
 summary::-webkit-details-marker {
 display: none;
-}
-
 summary::marker {
 display: none;
-}   
+}
+}
 details[open] {
 width: auto;
 }
 
-details::details-content {
-transition: content-visibility 2s ease-in-out allow-discrete;
-}
+@media (prefers-reduced-motion: reduce) {
+details,
+details-content {
+    transition-duration: 0.01ms;
+    transition: height 0.5s ease, content-visibility 0.5s ease allow-discrete;
+    height:auto;
+    overflow:clip;
+}}
